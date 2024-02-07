@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-main {
+header {
     height: 100dvh;
     background-color: white;
     background-image: linear-gradient(to bottom, #9aa1e8, transparent);
