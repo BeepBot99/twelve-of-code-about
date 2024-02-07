@@ -3,6 +3,8 @@ const typewriter = new Typewriter(typewriterElement, {
     loop: true,
     delay: 75
   });
-typewriter.typeString("Twelve Months of Code")
+typewriter.pauseFor(1000)
+    .typeString("Twelve Months of Code")
+    .pauseFor(2500)
     .deleteChars(4)
     .start()
