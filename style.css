@@ -5,10 +5,13 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Mono', ui-monospace, monospace;
+    font-size: 16px;
 }
 
 header {
     height: 100dvh;
     background-color: white;
-    background-image: linear-gradient(to bottom, #9aa1e8, transparent);
+    background-image: linear-gradient(to bottom, #bfc3ef, transparent);
+    color: #230a50;
 }
