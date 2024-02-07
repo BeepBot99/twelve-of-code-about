@@ -4,7 +4,14 @@ const typewriter = new Typewriter(typewriterElement, {
     delay: 75
   });
 typewriter.pauseFor(1000)
-    .typeString("Twelve Months of Code")
+    .typeString("Code")
     .pauseFor(2500)
-    .deleteChars(4)
+    .deleteAll()
+    .typeString("Challenges")
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString("Fun")
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString("Confusion")
     .start()
