@@ -4,3 +4,4 @@ const typewriter = new Typewriter(typewriterElement, {
     delay: 75
   });
 typewriter.typeString("Twelve Months of Code")
+    .start();
