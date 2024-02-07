@@ -22,7 +22,7 @@ header {
 }
 
 h1 {
-    margin-top: 0;
+    marign: 0.25rem;
     font-size: 6rem;
 }
 
