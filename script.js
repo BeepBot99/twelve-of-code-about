@@ -30,5 +30,5 @@ window.onload = () => {
 tippy("[data-tippy-content]", {
     theme: "light",
     animation: "scale-subtle",
-    followCursor: true
+    followCursor: "horizontal"
 });

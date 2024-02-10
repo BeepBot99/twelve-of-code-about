@@ -21,7 +21,7 @@ body {
 header {
     height: 100dvh;
     background-color: var(--background-base);
-    background-image: linear-gradient(to bottom, var(--background-overlay) 35%, transparent 60% 70%), url(assets/images/background-1.jpg);
+    background-image: linear-gradient(to bottom, var(--background-overlay), transparent), url(assets/images/background-1.jpg);
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     color: var(--primary-text-color);
