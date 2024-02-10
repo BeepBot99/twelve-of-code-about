@@ -16,6 +16,7 @@ body {
     padding: 0;
     font-family: 'Roboto Mono', ui-monospace, monospace;
     font-size: 16px;
+    background-color: var(--background-base);
 }
 
 header {
@@ -83,4 +84,30 @@ h3 {
     display: block;
     margin-bottom: 0.25rem;
     font-size: 1.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    .flipdown::before {
+        content: "";
+    }
+
+    .flipdown {
+        position: fixed;
+        background-color: black;
+        width: 100vw;
+        bottom: 0;
+        transform: translateY(-1rem);
+    }
+
+    .down-arrow-container {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 3rem;
+    }
+
+    .title h3 {
+        font-size: calc(100vw / .625 / 28);
+    }
 }
