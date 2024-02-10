@@ -4,16 +4,17 @@ const typewriter = new Typewriter(typewriterElement, {
     loop: true,
     strings: [
         "Code",
-        "Challenges",
-        "Fun",
-        "Confusion",
-        "Bugfixing",
-        "Waiting",
-        "Patience",
-        "Debugging",
-        "Programming",
         "Happiness",
-        "Excitement"
+        "Confusion",
+        "Pride",
+        "Challenges",
+        "Debugging",
+        "Confusion",
+        "Fun",
+        "Programming",
+        "Excitement",
+        "Development",
+        "the Year"
     ],
     autoStart: true
 });
