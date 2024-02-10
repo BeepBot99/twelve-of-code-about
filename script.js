@@ -18,5 +18,17 @@ const typewriter = new Typewriter(typewriterElement, {
     autoStart: true
 });
 
-// Countdown Timer until Twelve of Code is Released
-// new FlipDown(1709290800, {theme: "light"}).start();
+new FlipDown(1709290800, {theme: "light"}).start();
+window.onload = () => {
+    Array.from(document.getElementsByClassName("center-vertically-with-margin")).forEach(
+        element => {
+            const height = element.clientHeight;
+            element.style.marginTop = height + "px";
+        }
+    );
+};
+tippy("[data-tippy-content]", {
+    theme: "light",
+    animation: "scale-subtle",
+    followCursor: true
+});

@@ -1,6 +1,6 @@
 :root {
-    --background-base: #000a30;
-    --background-overlay: #004fb3;
+    --background-base: #000721;
+    --background-overlay: #110335;
     --primary-text-color: #6a8dbc;
     --secondary-text-color: #BC996A;
     --very-light-blue: #93ebf1;
@@ -21,14 +21,14 @@ body {
 header {
     height: 100dvh;
     background-color: var(--background-base);
-    background-image: linear-gradient(to bottom, var(--background-overlay), transparent 23%);
+    background-image: linear-gradient(to bottom, var(--background-overlay) 35%, transparent 60% 70%), url(assets/images/background-1.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
     color: var(--primary-text-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 5rem;
 }
 
 h1 {
@@ -43,10 +43,6 @@ h3 {
     margin: 0;
 }
 
-.description {
-    font-weight: light;
-}
-
 #typewriterDescription {
     color: var(--secondary-text-color);
 }
@@ -58,6 +54,7 @@ h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
+
 }
 
 .down-arrow-container img {
@@ -68,15 +65,13 @@ h3 {
     transition: all ease-in-out 200ms;
     cursor: pointer;
     padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: #ffffffb9;
 }
 
 .down-arrow-container:hover img {
     opacity: 0.75;
-    padding: 0.5rem;
-}
-
-.down-arrow-container img:hover {
-    padding: 0.25rem;
+    padding: 0.75rem 1.5rem;
 }
 
 .flipdown::before {
@@ -84,20 +79,4 @@ h3 {
     display: block;
     margin-bottom: 0.25rem;
     font-size: 1.5em;
-}
-
-.move-to-top {
-    animation: move-to-top forwards 2s;
-}
-
-@keyframes move-to-top {
-    from {
-        position: absolute;
-        top: 30%;
-    }
-
-    to {
-        position: absolute;
-        top: 0;
-    }
 }
