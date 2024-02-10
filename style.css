@@ -82,7 +82,7 @@ h3 {
 .flipdown::before {
     content: "Twelve of Code releases in";
     display: block;
-    margin-bottom: 0.25rem;
+    transform: translateY(-0.25rem);
     font-size: 1.5em;
 }
 
@@ -109,5 +109,16 @@ h3 {
 
     .title h3 {
         font-size: calc(100vw / .625 / 28);
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    header {
+        justify-content: center;
+    }
+
+    .title {
+        position: absolute;
+        top: 0;
     }
 }
