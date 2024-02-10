@@ -9,7 +9,6 @@ const typewriter = new Typewriter(typewriterElement, {
         "Pride",
         "Challenges",
         "Debugging",
-        "Confusion",
         "Fun",
         "Programming",
         "Excitement",
