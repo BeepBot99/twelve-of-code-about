@@ -24,7 +24,7 @@ header {
     background-image: linear-gradient(to bottom, var(--background-overlay), transparent 23%);
     color: var(--primary-text-color);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -84,4 +84,20 @@ h3 {
     display: block;
     margin-bottom: 0.25rem;
     font-size: 1.5em;
+}
+
+.move-to-top {
+    animation: move-to-top forwards 2s;
+}
+
+@keyframes move-to-top {
+    from {
+        position: absolute;
+        top: 30%;
+    }
+
+    to {
+        position: absolute;
+        top: 0;
+    }
 }
