@@ -17,6 +17,7 @@ body {
     font-family: 'Roboto Mono', ui-monospace, monospace;
     font-size: 16px;
     background-color: var(--background-base);
+    color: var(--primary-text-color);
 }
 
 header {
@@ -25,7 +26,6 @@ header {
     background-image: linear-gradient(to bottom, var(--background-overlay), transparent), url("assets/images/background-1.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
-    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
