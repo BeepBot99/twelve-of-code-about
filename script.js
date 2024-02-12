@@ -30,3 +30,6 @@ document.getElementById("scrollDownButton").addEventListener("click", () => {
 Array.from(document.getElementsByClassName("hide-without-javascript")).forEach(element => {
     element.style.display = "block";
 });
+function fitIframeContents(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + "px";
+}
