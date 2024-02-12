@@ -18,9 +18,15 @@ const typewriter = new Typewriter(typewriterElement, {
     autoStart: true
 });
 
-new FlipDown(1709290800, {theme: "light"}).start();
+new FlipDown(1709294400, {theme: "light"}).start();
 tippy("[data-tippy-content]", {
     theme: "light",
     animation: "scale-subtle",
     followCursor: "horizontal"
+});
+document.getElementById("scrollDownButton").addEventListener("click", () => {
+    document.getElementById("aboutBlocks").scrollIntoView();
+});
+Array.from(document.getElementsByClassName("hide-without-javascript")).forEach(element => {
+    element.style.display = "block";
 });
