@@ -160,20 +160,8 @@
         </table>
         <script>
             const active = {};
-            const months = [
-                "jan",
-                "feb",
-                "mar",
-                "apr",
-                "may",
-                "jun",
-                "jul",
-                "aug",
-                "sep",
-                "oct",
-                "nov",
-                "dec"
-            ];
+            const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+
             function yearSelect(year) {
                 if (active.year === year) {
                     document.getElementById("select-month").classList.add("noDisplay");
@@ -182,13 +170,24 @@
                     document.getElementById("syear-" + year).classList.remove("select-active");
                 } else {
                     if (active.year) {
-                        document
-                            .getElementById("syear-" + active.year)
-                            .classList.remove("select-active");
+                        document.getElementById("syear-" + active.year).classList.remove("select-active");
                     }
                     active.year = year;
                     document.getElementById("syear-" + year).classList.add("select-active");
                 }
+            }
+
+            const noDoubleElements = document.getElementsByClassName("noDouble");
+            for (let i = 0; i < noDoubleElements.length; i++) {
+                noDoubleElements[i].addEventListener(
+                    "mousedown",
+                    function (event) {
+                        if (event.detail > 1) {
+                            event.preventDefault();
+                        }
+                    },
+                    false
+                );
             }
         </script>
     </body>
