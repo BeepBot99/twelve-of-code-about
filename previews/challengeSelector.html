@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Twelve of Code Challenge Selector Preview</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Roboto Mono&display=swap");
+            body {
+                background-color: #000721;
+                color: white;
+                overflow-y: scroll;
+                font-family: "Roboto Mono", ui-monospace, monospace;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            [data-unreleased] td,
+            [data-unreleased] td:hover {
+                opacity: 0.3;
+                cursor: not-allowed !important;
+            }
+
+            .completed td,
+            .completed td:hover {
+                color: yellow !important;
+            }
+
+            .in-progress td,
+            .in-progress td:hover {
+                color: #29d362 !important;
+            }
+
+            td::after {
+                content: " ";
+                margin-left: 0.5rem;
+                vertical-align: middle;
+            }
+
+            .completed:hover {
+                opacity: 0.9;
+            }
+
+            .completed td::after {
+                content: "***";
+            }
+
+            #select-challenge .completed td::after {
+                content: "*";
+            }
+
+            .in-progress td::after {
+                content: "...";
+            }
+
+            .select {
+                width: 50%;
+                text-align: center;
+                margin: auto;
+            }
+
+            .select td {
+                background-color: #000e43;
+            }
+
+            .select td:hover {
+                background-color: #00135b;
+                cursor: pointer;
+            }
+
+            .select-active td,
+            .select-active td:hover {
+                background-color: #001b82;
+            }
+
+            .notCompleted {
+                color: #2a2c32;
+            }
+
+            .noDisplay {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="select noDouble" id="select-year">
+            <tr>
+                <th>--- SELECT YEAR ---</th>
+            </tr>
+            <tr id="syear-2024" onclick="yearSelect(2024)">
+                <td>2024</td>
+            </tr>
+            <tr id="syear-2025" onclick="yearSelect(2025)">
+                <td>2025</td>
+            </tr>
+            <tr id="syear-2026" onclick="yearSelect(2026)">
+                <td>2026</td>
+            </tr>
+        </table>
+        <div id="notes"></div>
+        <br />
+        <table class="select noDisplay noDouble" id="select-month">
+            <tr>
+                <th>--- SELECT MONTH ---</th>
+            </tr>
+            <tr id="smonth-jan">
+                <td>January</td>
+            </tr>
+            <tr id="smonth-feb">
+                <td>February</td>
+            </tr>
+            <tr id="smonth-mar">
+                <td>March</td>
+            </tr>
+            <tr id="smonth-apr">
+                <td>April</td>
+            </tr>
+            <tr id="smonth-may">
+                <td>May</td>
+            </tr>
+            <tr id="smonth-jun">
+                <td>June</td>
+            </tr>
+            <tr id="smonth-jul">
+                <td>July</td>
+            </tr>
+            <tr id="smonth-aug">
+                <td>August</td>
+            </tr>
+            <tr id="smonth-sep">
+                <td>September</td>
+            </tr>
+            <tr id="smonth-oct">
+                <td>October</td>
+            </tr>
+            <tr id="smonth-nov">
+                <td>November</td>
+            </tr>
+            <tr id="smonth-dec">
+                <td>December</td>
+            </tr>
+        </table>
+        <br />
+        <table class="select noDisplay noDouble" id="select-challenge">
+            <tr>
+                <th>--- SELECT CHALLENGE ---</th>
+            </tr>
+            <tr id="schallenge-1">
+                <td>Challenge 1</td>
+            </tr>
+            <tr id="schallenge-2">
+                <td>Challenge 2</td>
+            </tr>
+            <tr id="schallenge-3">
+                <td>Challenge 3</td>
+            </tr>
+        </table>
+        <script>
+            const active = {};
+            const months = [
+                "jan",
+                "feb",
+                "mar",
+                "apr",
+                "may",
+                "jun",
+                "jul",
+                "aug",
+                "sep",
+                "oct",
+                "nov",
+                "dec"
+            ];
+            function yearSelect(year) {
+                if (active.year === year) {
+                    document.getElementById("select-month").classList.add("noDisplay");
+                    document.getElementById("select-challenge").classList.add("noDisplay");
+                    active.year = undefined;
+                    document.getElementById("syear-" + year).classList.remove("select-active");
+                } else {
+                    if (active.year) {
+                        document
+                            .getElementById("syear-" + active.year)
+                            .classList.remove("select-active");
+                    }
+                    active.year = year;
+                    document.getElementById("syear-" + year).classList.add("select-active");
+                }
+            }
+        </script>
+    </body>
+</html>
