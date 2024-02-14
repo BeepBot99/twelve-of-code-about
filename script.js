@@ -13,20 +13,21 @@ const typewriter = new Typewriter(typewriterElement, {
         "Programming",
         "Excitement",
         "Development",
-        "the Year"
+        "the Year",
     ],
-    autoStart: true
+    autoStart: true,
 });
 
-new FlipDown(1709294400, {theme: "light"}).start();
+new FlipDown(1709294400, { theme: "light" }).start();
+AOS.init();
 tippy("[data-tippy-content]", {
     theme: "light",
     animation: "scale-subtle",
-    followCursor: "horizontal"
+    followCursor: "horizontal",
 });
 document.getElementById("scrollDownButton").addEventListener("click", () => {
     document.getElementById("aboutBlocks").scrollIntoView();
 });
-Array.from(document.getElementsByClassName("hide-without-javascript")).forEach(element => {
+Array.from(document.getElementsByClassName("hide-without-javascript")).forEach((element) => {
     element.style.display = "block";
 });
